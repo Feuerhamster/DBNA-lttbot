@@ -1,0 +1,25 @@
+{
+  "name": "dbna-lttbot",
+  "version": "1.0.0",
+  "description": "A Node.js Bot for DBNA to track and handle \"like-to-text\" posts.",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Feuerhamster/DBNA-lttbot.git"
+  },
+  "author": "Feuerhamster",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Feuerhamster/DBNA-lttbot/issues"
+  },
+  "homepage": "https://github.com/Feuerhamster/DBNA-lttbot#readme",
+  "dependencies": {
+    "@types/lowdb": "^1.0.9",
+    "axios": "^0.19.2",
+    "lowdb": "^1.0.0",
+    "ws": "^7.2.1"
+  }
+}
