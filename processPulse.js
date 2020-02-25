@@ -2,10 +2,10 @@ let main = require('./main.js');
 
 function processPulse(){
 
-	let { dbna, myAccountData, db, tcw, config} = main;
+	let { dbna, db, tcw, config} = main;
 
 	// get current stream entries
-	dbna.pulse().getCurrent().then(pulse => {
+	dbna.pulse('u0mdmkDLZC').getCurrent().then(pulse => {
 		// loop over all stream entries
 		for(let story of pulse.stories){
 
@@ -33,26 +33,27 @@ function processStory(story){
 	let { dbna, myAccountData, db, tcw, config} = main;
 
 	// like the ltt story
-	dbna.story(story.id).heart();
+	//dbna.story(story.id).heart();
 
 	// select a random comment
 	let selectedComment = config.lttPostComments[Math.floor(Math.random() * config.lttPostComments.length)];
 	// post a comment to the ltt story
-	dbna.story(story.id).comments().post(selectedComment)
-		.catch(err => console.error(err));
+	/*dbna.story(story.id).comments().post(selectedComment)
+		.catch(err => console.error(err));*/
 
 	db.get('processedStories').push(story.id).write();
+	db.update('analytics.totalPosts', n => n + 1).write();
 
-	let topUsers = db.get('analytics.topUsers').value();
-	if(topUsers[story.user.id]){
-		topUsers[story.user.id]++
+	let analyticsDay = new Date(db.get('analytics.day').value()).setHours(0,0,0,0);
+	let currentDay = new Date().setHours(0,0,0,0);
+	if(analyticsDay < currentDay){
+		db.set('analytics.postsToday', 1).write();
+		db.set('analytics.day', new Date().toString()).write();
 	}else{
-		topUsers[story.user.id] = 1
+		db.update('analytics.postsToday', n => n + 1).write();
 	}
 
-	db.update('analytics.topUsers', topUsers).write();
 
-	db.update('analytics.postsToday', n => n + 1).write();
 
 }
 
