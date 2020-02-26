@@ -49,9 +49,14 @@ db.defaults({
 }).write();
 db.read();
 
-db.set('analytics.queryInterval', config.dbna.queryInterval).write();
-db.set('status.chat', 1).write();
-db.set('status.ltt', 1).write();
+db.set('analytics.queryInterval', config.dbna.queryInterval).write()
+
+if(db.get('status.chat').value() !== 2){
+	db.set('status.chat', 1).write();
+}
+if(db.get('status.ltt').value() !== 2){
+	db.set('status.ltt', 1).write();
+}
 
 /*
 * Main Function
