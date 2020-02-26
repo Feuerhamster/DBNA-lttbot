@@ -90,6 +90,13 @@ trainData.forEach((line)=>{
 
 db.set('analytics.trainData', trainData.length).write();
 
+/*
+* Webserver for heroku to run
+* */
+http.createServer(function (req, res) {
+	res.write('DBNA-lttbot app');
+	res.end();
+}).listen(process.env.PORT || 3000);
 
 // export all important modules
 module.exports.dbna = dbna;
