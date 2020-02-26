@@ -18,10 +18,9 @@ const tcw = new TextClass.SingleWeighted();
 const db = lowDB(new FileSync('./data/db.json'));
 
 // log in to dbna
-/*
 dbna.login(config.dbna.login.username, config.dbna.login.password)
 	.then(data => main(data))
-	.catch(err => console.error(err.data));*/
+	.catch(err => console.error(err.data));
 
 // set defaults for lowdb json
 db.defaults({ processedStories: [], analytics: { postsToday: 0, totalPosts: 0 , trainData: 0, queryInterval: 0, day: new Date().toString() } }).write();
@@ -44,6 +43,8 @@ function main(myAccountData){
 
 	}, config.dbna.queryInterval * 1000);
 
+	updateDashboard();
+
 }
 
 // train textClass
@@ -61,5 +62,3 @@ module.exports.dbna = dbna;
 module.exports.db = db;
 module.exports.tcw = tcw;
 module.exports.config = config;
-
-updateDashboard();

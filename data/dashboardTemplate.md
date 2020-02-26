@@ -1,8 +1,9 @@
 # 💬 WerWillSchreiben - Dashboard
-
+## Statistiken
 ### 📈 Heute im Stream: **{postsToday}**
 ### 📊 Alle bearbeiteteten Posts: **{totalPosts}**
-### 📅 : **{day}**
+### 📅 Stand der Daten: **{day}**
 
-### ⏰ Abfrageinterval: **{queryInterval}**
+## Konfiguration
+### ⏰ Abfrageinterval: **{queryInterval} Sekunden**
 ### 📖 Trainingsdaten: **{trainData}**

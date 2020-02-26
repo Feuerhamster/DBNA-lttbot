@@ -1,4 +1,5 @@
 let main = require('./main.js');
+let updateDashboard = require('./updateDashboard');
 
 function processPulse(){
 
@@ -8,7 +9,6 @@ function processPulse(){
 	dbna.pulse('u0mdmkDLZC').getCurrent().then(pulse => {
 		// loop over all stream entries
 		for(let story of pulse.stories){
-
 			// continue if story has no body or comments are disabled (in case of pictures or something)
 			if(!story.body || !story.comments || story.comments.disabled) continue;
 
@@ -33,13 +33,13 @@ function processStory(story){
 	let { dbna, myAccountData, db, tcw, config} = main;
 
 	// like the ltt story
-	//dbna.story(story.id).heart();
+	dbna.story(story.id).heart();
 
 	// select a random comment
 	let selectedComment = config.lttPostComments[Math.floor(Math.random() * config.lttPostComments.length)];
 	// post a comment to the ltt story
-	/*dbna.story(story.id).comments().post(selectedComment)
-		.catch(err => console.error(err));*/
+	dbna.story(story.id).comments().post(selectedComment)
+		.catch(err => console.error(err));
 
 	db.get('processedStories').push(story.id).write();
 	db.update('analytics.totalPosts', n => n + 1).write();
@@ -53,7 +53,7 @@ function processStory(story){
 		db.update('analytics.postsToday', n => n + 1).write();
 	}
 
-
+	updateDashboard();
 
 }
 
