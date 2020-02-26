@@ -32,6 +32,8 @@ function processStory(story){
 
 	let { dbna, myAccountData, db, tcw, config} = main;
 
+	console.log('[dbna] process ltt story...');
+
 	// like the ltt story
 	dbna.story(story.id).heart();
 

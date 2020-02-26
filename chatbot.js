@@ -47,7 +47,7 @@ function chatBot(){
 		rsbot.reply('local-user', tcw.tokenize(msg.message.message).join(' '))
 			.then((reply) => {
 
-				if(reply !== 'error'){
+				if(reply !== 'error' && reply !== 'ERR: No Reply Found'){
 
 					setTimeout(()=>{
 
