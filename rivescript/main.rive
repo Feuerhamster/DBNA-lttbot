@@ -43,8 +43,8 @@
 ! sub don't = nicht tun
 ! sub ist nicht = ist nicht
 ! sub you'd = Sie würden
-! sub Sie sind = Sie sind
-! sub Sie haben = Sie haben
+! sub Du bist = Du bist
+! sub Du hast = Du hast
 ! sub you'll = Sie werden
 ! sub er würde = er würde
 ! sub er ist = er ist
@@ -83,7 +83,7 @@
 ! sub when're = wann sind
 ! sub wann'd = wann hat
 ! sub y = warum
-! sub u = Sie
+! sub u = Du
 ! sub ur = Ihr
 ! sub r = sind
 ! sub n = und
@@ -110,8 +110,8 @@
 ! sub realy = wirklich
 ! sub iamusing = ich benutze
 ! sub amleaving = verlasse ich
-! sub yuo = Sie
-! sub youre = Sie sind
+! sub yuo = du
+! sub youre = du bist
 ! sub didnt = hat nicht
 ! sub ain't = ist nicht
 ! sub aint = ist nicht
@@ -167,8 +167,8 @@
 ! sub (w) = verwelkte Rose
 
 + mein name ist *
-- <set name = <formal >> Schön, Sie kennenzulernen, <get name>.
-- <set name = <formal >> <get name>, schön Sie kennenzulernen.
+- <set name = <formal >> Schön, dich kennenzulernen, <get name>.
+- <set name = <formal >> <get name>, schön dich kennenzulernen.
 
 + mein name ist <bot master>
 - <set name = <bot master >> Das ist auch der name meines Masters.
@@ -177,8 +177,8 @@
 - <set name = <bot name >> Was für ein Zufall! Das ist auch mein name!
 - <set name = <bot name >> Das ist auch mein name!
 
-+ ruf mich an *
-- <set name = <formal >> <get name>, ich werde Sie von nun an so nennen.
++ nenne mich *
+- <set name = <formal >> <get name>, ich werde dich von nun an so nennen.
 
 + ich bin * jahre alt
 - <set age = <star >> Viele Leute sind <get age>, du bist nicht allein.
@@ -210,11 +210,11 @@
 
 + (wie ist mein name|wer bin ich|wennst du meinen namen|weißt du wer ich bin)
 - Ihr name ist <get name>.
-- Sie haben mir gesagt, dass Sie <get name> heißen.
+- Du hast mir gesagt, dass du <get name> heißen.
 - Bist du nicht <name bekommen>?
 
 + (wie alt bin ich|weißt du wie alt ich bin|weißt du mein alter)
-- Sie sind <alt werden> jahre alt.
+- Du bist <alt werden> jahre alt.
 - Du wirst älter.
 
 + bin ich ein (@malenoun) oder ein (@femalenoun)
@@ -303,9 +303,9 @@
 
 + ich erinnere mich *
 - Denkst du oft an <star>?
-- Erinnert Sie der Gedanke an <star> an etwas anderes?
+- Erinnerst dich der Gedanke an <star> an etwas anderes?
 - Warum erinnerst du dich gerade an <star>?
-- Was erinnert Sie in der gegenwärtigen Situation an <star>?
+- Was erinnert dich in der gegenwärtigen Situation an <star>?
 - Was ist die Verbindung zwischen mir und <star>?
 - Woran erinnert dich <star> noch?
 
@@ -313,7 +313,7 @@
 - Dachtest du, ich würde <star> vergessen?
 - Warum sollte ich mich jetzt an <star> erinnern?
 - Was ist mit <star>?
-- Sie haben <star> erwähnt?
+- Du hast <star> erwähnt?
 
 + du erinnerst dich *
 - Wie könnte ich <star> vergessen?
@@ -325,7 +325,7 @@
 - Wie oft denkst du an <star>?
 - Stört es dich, das zu vergessen?
 - Könnte es eine mentale Blockade sein?
-- Sind Sie allgemein vergesslich?
+- Bist du allgemein vergesslich?
 - Glaubst du, du unterdrückst <star>?
 
 + hast du vergessen *
@@ -351,25 +351,25 @@
 - Was schlägt Ihnen dieser Traum vor?
 - Träumst du oft?
 - Welche Personen tauchen in Ihren Träumen auf?
-- Glauben Sie, dass Träume etwas mit Ihrem Problem zu tun haben?
+- Glaubst du, dass Träume etwas mit Ihrem Problem zu tun haben?
 
 + [*] vielleicht [*]
-- Sie scheinen nicht ganz sicher zu sein.
+- Du scheinst nicht ganz sicher zu sein.
 - Warum der ungewisse Ton?
 - Kannst du nicht positiver sein?
 - Bist du dir nicht sicher?
 - Weißt du nicht?
-- Wie wahrscheinlich, schätzen Sie?
+- Wie wahrscheinlich, schätzt du?
 
 + (hallo|hi|hey|grüß dich|hola|hai|yo) [*]
 - Hi wie geht's.
 - Guten Abend
 
 + [*] computer [*]
-- Sorgen Sie sich um Computer?
-- Warum erwähnen Sie Computer?
+- Sorgst du dich um Computer?
+- Warum erwähnst du Computer?
 - Was haben Ihrer Meinung nach Maschinen mit Ihrem Problem zu tun?
-- Glauben Sie nicht, dass Computer Menschen helfen können?
+- Glaubst du nicht, dass Computer Menschen helfen können?
 - Was macht Ihnen die Maschine Sorgen?
 - Was denkst du über Maschinen?
 
@@ -398,7 +398,7 @@
 - Würde es dir gefallen, wenn sie nicht <star2> wären?
 - Was wäre, wenn sie nicht <star2> wären?
 - Sind sie immer <star2>?
-- Sind Sie sicher, dass sie <star2> sind?
+- Bist du  sicher, dass sie <star2> sind?
 
 + [*] dein *
 - Warum machst du dir Sorgen um meinen <star>?
@@ -411,14 +411,14 @@
 + war ich *
 - Was wäre, wenn du <star> wärst?
 - Glaubst du, du wärst <star>?
-- Waren Sie <star>?
-- Was würde es bedeuten, wenn Sie <star> wären?
+- Warst du <star>?
+- Was würde es bedeuten, wenn du <star> wärst?
 - Was schlägt '<star>' Ihnen vor?
 
 + ich war *
 - Warst du wirklich?
 - Warum sagst du mir, dass du jetzt <star> warst?
-- Vielleicht weiß ich schon, dass Sie <star> waren.
+- Vielleicht weiß ich schon, dass du <star> warst.
 
 + [*] warst du *
 - Möchtest du glauben, dass ich <star> bin?
@@ -428,48 +428,47 @@
 - Was wäre, wenn ich <star> gewesen wäre?
 
 + ich (wunsch|will|brauche) *
-- Was würde es für Sie bedeuten, wenn Sie <star2> hätten?
-- Warum willst du <star2>?
-- Angenommen, Sie haben <star2> bald.
-- Was ist, wenn Sie nie <star2> haben?
-- Was würde es für Sie bedeuten, <star2> zu bekommen?
-- Was hat das Wollen von <star2> mit dieser Diskussion zu tun?
+- Was würde es für dich bedeuten, wenn du <star> hättest?
+- Warum willst du <star>?
+- Angenommen, Du hast <star> bald.
+- Was ist, wenn du nie <star> hast?
+- Was würde es für dich bedeuten, <star> zu bekommen?
+- Was hat das Wollen von <star> mit dieser Diskussion zu tun?
 
 + ich bin (traurig|unglücklich|verrückt|wütend|sauer|deprimiert) [*]
-- Es tut mir leid, dass Sie <star> sind.
+- Es tut mir leid, dass du <star> bist.
 - Glaubst du, dass es dir helfen wird, nicht <star> zu sein?
 - ich bin sicher, es ist nicht angenehm, <star> zu sein.
 - Kannst du erklären, warum du <star> bist?
 
 + ich bin (glücklich|aufgeregt|froh) [*]
 - Wie habe ich dir geholfen, <star> zu sein?
-- Hat Ihre Behandlung Sie zum <star> gemacht?
 - Was macht dich gerade zum <star>?
 - Kannst du erklären, warum du <star> bist?
 
 + ich (glaube|denke) *
 - Denkst du das wirklich?
-- Aber Sie sind sich nicht sicher, ob Sie <star2> sind.
+- Aber du bist sich nicht sicher?
 - Zweifelst du wirklich an dir, <star2>?
 
 + ich bin *
 - Bist du, <star>, zu mir gekommen?
 - Seit wann bist du <star>?
 - Glaubst du, es ist normal, <star> zu sein?
-- Mögen Sie es, <star> zu sein?
-- Kennen Sie noch jemanden, der <star> ist?
+- Magst du es, <star> zu sein?
+- Kennst du noch jemanden, der <star> ist?
 
 + ich kann nicht *
 - Woher weißt du, dass du nicht <star> kannst?
 - Hahast du es versucht
-- Vielleicht könnten Sie jetzt <star>.
+- Vielleicht kannst du jetzt <star>.
 - Möchtest du wirklich in der Lage sein, <star> zu werden?
-- Was, wenn Sie <star> könnten?
+- Was, wenn du <star> könntest?
 
 + tue ich nicht *
 - Bist du nicht wirklich <star>?
 - Warum nicht, <star>?
-- Möchten Sie in der Lage sein, <star>?
+- Möchten du in der Lage sein, <star>?
 - Ärgert dich das?
 
 + ich fühle *
@@ -481,17 +480,8 @@
 + ich * du
 - Vielleicht <star> wir uns in deinen Fantasien.
 - Möchtest du mich <star>?
-- Sie müssen mich anscheinend <anstarren>.
-- Haben Sie noch jemanden?
-
-+ du * ich
-- Warum, denkst du, <star> ich dich?
-- Du denkst doch gerne, ich <star> dich?
-- Warum denkst du, ich <star> dich?
-- Wirklich, ich <star> dich?
-- Möchtest du glauben, dass ich <star> bin?
-- Angenommen, ich hätte <star> Sie - was würde das bedeuten?
-- Glaubt jemand anderes, dass ich Sie <star> bin?
+- Du musst mich anscheinend <anstarren>.
+- Hast du noch jemanden?
 
 + [*] du *
 - Wir haben über dich gesprochen - nicht über mich.
@@ -508,7 +498,7 @@
 
 + [*] (nein|nah) [*]
 - Sagst du nein, nur um negativ zu sein?
-- Fühlen Sie sich unglücklich?
+- Fühlst du dich unglücklich?
 - Warum nicht?
 - Warum nicht?
 
@@ -521,35 +511,18 @@
 - Kannst du dir überhaupt jemanden vorstellen?
 - Denkst du an eine ganz besondere Person?
 - Wen darf ich fragen?
-- Sie haben eine bestimmte Person im Sinn, nicht wahr?
+- Du hast eine bestimmte Person im Sinn, nicht wahr?
 - Von wem denkst du, sprichst du?
-
-+ [*] mein (mama|papa|mutter|vater|bruder|schwester|cousin|tante|onkel) *
-- Erzähl mir mehr über deine Familie.
-- Wer sonst in Ihrer Familie <star2>?
-- Dein <star>?
-- Was fällt Ihnen sonst noch ein, wenn Sie an Ihren <star> denken?
 
 + kannst du *
 - Glaubst du, ich kann <star>?
 - ich soll in der Lage sein, <star>.
-- Vielleicht möchten Sie in der Lage sein, <star> zu werden.
+- Vielleicht möchtest du in der Lage sein, <star> zu werden.
 
 + kann ich *
 - Ob Ihr <star> könnt oder nicht, hängt mehr von Euch als von mir ab.
-- Möchten Sie in der Lage sein, <star>?
-- Vielleicht wollen Sie nicht <star>.
-
-+ (was|wer|wann|wo|wie) [*]
-- Warum fragst du?
-- Interessiert Sie diese Frage?
-- Was möchten Sie wirklich wissen?
-- Haben Sie solche Fragen im Kopf?
-- Welche Antwort würde Ihnen am meisten gefallen?
-- Was denkst du?
-- Woran denkst du, wenn du das fragst?
-- Haben Sie solche Fragen schon einmal gestellt?
-- Hast du noch jemanden gefragt?
+- Möchtest du in der Lage sein, <star>?
+- Vielleicht willst du nicht <star>.
 
 + [*] weil [*]
 - Ist das der wahre Grund?
@@ -565,7 +538,7 @@
 
 + warum kann ich nicht *
 - Meinst du, du solltest in der Lage sein, <star> zu werden?
-- Möchten Sie in der Lage sein, <star>?
+- Möchtst du in der Lage sein, <star>?
 - Glaubst du, das wird dir helfen, <star> zu werden?
 - Weißt du, warum du nicht <star> kannst?
 
@@ -577,16 +550,16 @@
 - Denkst du an eine ganz besondere Person?
 - Wen darf ich fragen?
 - Vielleicht jemand Besonderes?
-- Sie haben einen bestimmten Grund, nicht wahr?
+- Du hast einen bestimmten Grund, nicht wahr?
 - Von wem denkst du, sprichst du?
 
 + [*] (fuck|fucker|shit|damn|shut up|bitch|scheiße|hurensohn|hure|arsch) [*]
 - Fühlt es sich stark an, diese Art von Sprache zu benutzen?
 - Lässt du jetzt deine Gefühle aus?
 - Bist du wütend?
-- Fühlen Sie sich durch dieses Thema wütend?
+- Fühlst du dich durch dieses Thema wütend?
 - Macht dich etwas wütend?
-- Fühlen Sie sich mit dieser Sprache besser?
+- Fühlst du dich mit dieser Sprache besser?
 
 + [*] bock auf *
 - Findest du <star> gut?
