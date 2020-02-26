@@ -44,37 +44,38 @@ function chatBot(){
 		// check if chatbot is disabled
 		if(db.get('status.chat').value() !== 1) return;
 
-		setTimeout(()=>{
+		rsbot.reply('local-user', tcw.tokenize(msg.message.message).join(' '))
+			.then((reply) => {
 
-			msg.actions.read();
+				if(reply !== 'error'){
 
-			setTimeout(() => {
+					setTimeout(()=>{
 
-				msg.chat.typing(true);
+						msg.actions.read();
 
-				rsbot.reply('local-user', tcw.tokenize(msg.message.message).join(' '))
-					.then((reply) => {
+						setTimeout(() => {
 
-						if(reply !== 'error'){
+							msg.chat.typing(true);
+
 							setTimeout(() => {
 								msg.chat.typing(false);
 								msg.chat.send(reply);
 							}, textDelay(reply));
-						}else{
-							setTimeout(() => {
-								msg.chat.typing(false);
-								msg.chat.send('Sorry ich muss mal eben wo hin. Wir können später weiter schreiben.');
-							}, textDelay(reply));
-							dbna.user(config.chatbot.rootUsers[0]).chat().send(`LTT-Bot: Cannot answer to "${msg.message.message}"`);
-						}
 
 
-					});
+						}, textDelay(msg.message.message) / 2);
+
+					}, textDelay(msg.message.message));
+
+				}else{
+					setTimeout(() => {
+						msg.chat.typing(false);
+					}, textDelay(reply));
+					dbna.user(config.chatbot.rootUsers[0]).chat().send(`LTT-Bot: Cannot answer to "${msg.message.message}"`);
+				}
 
 
-			}, textDelay(msg.message.message) / 2);
-
-		}, textDelay(msg.message.message));
+			});
 
 
 	});

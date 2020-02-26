@@ -348,7 +348,7 @@
 - Wirklich, <star>?
 - Hast du jemals <star> geträumt, als du wach warst?
 - Hast du jemals davon geträumt, <star> zu sein?
-- Was schlägt Ihnen dieser Traum vor?
+- Was schlägt dir dieser Traum vor?
 - Träumst du oft?
 - Welche Personen tauchen in Ihren Träumen auf?
 - Glaubst du, dass Träume etwas mit Ihrem Problem zu tun haben?
@@ -370,7 +370,6 @@
 - Warum erwähnst du Computer?
 - Was haben Ihrer Meinung nach Maschinen mit Ihrem Problem zu tun?
 - Glaubst du nicht, dass Computer Menschen helfen können?
-- Was macht Ihnen die Maschine Sorgen?
 - Was denkst du über Maschinen?
 
 + bin ich *
@@ -526,7 +525,7 @@
 
 + [*] weil [*]
 - Ist das der wahre Grund?
-- Kommen Ihnen keine anderen Gründe in den Sinn?
+- Kommt dir keine anderen Gründe in den Sinn?
 - Scheint dieser Grund etwas anderes zu erklären?
 - Welche anderen Gründe könnte es geben?
 
@@ -565,10 +564,22 @@
 - Findest du <star> gut?
 - Ich bin mir nicht sicher, ob ich <star> mag
 
-+ (ok|ja|gut)
++ [*] wie (geht|geht's) [es dir] [*]
+- Ganz gut
+- Soweit ganz ok
+
++ was suchst du [so] [so|hier]
+- Nichts besonderes
+- Ich bin nur hier weil ich lange weile habe
+- Ich suche im Stream nach diesen Leuten, die wer will schreiben posten.
+
++ [mir] [geht es|gehts] gut [und dir]
+
++ [ah ](ok|ja|gut)
 - Hm
 - nagut
 - na dann
+- Jup
 
 + *
 - error
