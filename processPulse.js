@@ -6,7 +6,7 @@ function processPulse(){
 	let { dbna, db, tcw, config} = main;
 
 	// get current stream entries
-	dbna.pulse('u0mdmkDLZC').getCurrent().then(pulse => {
+	dbna.pulse().getCurrent().then(pulse => {
 		// loop over all stream entries
 		for(let story of pulse.stories){
 			// continue if story has no body or comments are disabled (in case of pictures or something)

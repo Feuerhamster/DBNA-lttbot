@@ -7,18 +7,30 @@ function updateDashboard(){
 
 	let template = fs.readFileSync('./data/dashboardTemplate.md').toString();
 
-	let placeholders = Array.from(template.matchAll(/{(\w+)}/g), el => { return {tag: el[0], name: el[1]} });
+	let placeholders = Array.from(template.matchAll(/{([a-zA-Z0-9.]+)}/g), el => { return {tag: el[0], name: el[1]} });
 
 	placeholders.forEach((placeholder) => {
 
-		let value = db.get('analytics.' + placeholder.name).value();
-		//check if value is date
+		let value = db.get(placeholder.name).value();
+
+		/*
+		* Date calculation
+		* */
 		if(typeof value == "string" && !isNaN(new Date(value))){
 			let date = new Date(value);
-			if(date.setHours(0,0,0,0) === new Date().setHours(0,0,0,0)){
-				value = "Heute";
-			}else{
-				value = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+			value = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+		}
+
+		/*
+		* Status conversion
+		* */
+		if(typeof value == 'number' && placeholder.name.startsWith('status')){
+			if(value === 1){
+				value = '✅ Aktiv';
+			}else if(value === 2){
+				value = '⚠ Deaktiviert';
+			}else if(value === 0){
+				value = '❌ Offline';
 			}
 		}
 

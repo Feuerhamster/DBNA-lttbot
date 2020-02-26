@@ -1,0 +1,606 @@
+! Version = 2.0
+
+> begin
+	+ request // Dieser Trigger wird zuerst getestet.
+	- {ok} // Ein {ok} in der Antwort bedeutet, dass es in Ordnung ist, eine echte Antwort zu erhalten.
+< begin
+
+// Der name des botmasters
+! var master = localuser
+
+// bot Variablen
+! var name = LTT-Manager
+! var fullname = Nicolas Hansen
+! var age = 17
+! var Geburtstag = 12. Oktober
+! var sex = männlich
+! var location = Berlin
+! var city = Berlin
+! var Augen = blau
+! var Haare = blond
+! var hairlen = mittel
+! var color = blau
+! var band = Alle Farben
+! var book = 2049
+! var author = Stephen King
+! var job = Goldschmied
+! var website = www.ich-hab-keine-webseite.com
+
+// Auswechslungen
+! sub &quot; = "
+! sub &apos; = '
+! sub &amp; = &
+! sub &lt; = <
+! sub &gt; = >
+! sub + = plus
+! sub - = minus
+! sub / = geteilt
+! sub * = Zeiten
+! sub i'm = ich bin
+! sub i'd = ich würde
+! sub i've = ich habe
+! sub i'll = i will
+! sub don't = nicht tun
+! sub ist nicht = ist nicht
+! sub you'd = Sie würden
+! sub Sie sind = Sie sind
+! sub Sie haben = Sie haben
+! sub you'll = Sie werden
+! sub er würde = er würde
+! sub er ist = er ist
+! sub er wird = er wird
+! sub she'd = sie würde
+! sub sie ist = sie ist
+! sub sie wird = sie wird
+! sub sie d = sie würden
+! sub sie sind = sie sind
+! sub sie haben = sie haben
+! sub sie werden = sie werden
+! sub wir'd = wir würden
+! sub wir sind = wir sind
+! sub wir haben = wir haben
+! sub wir werden = wir werden
+! sub whats = was ist
+! sub was ist = was ist
+! sub was sind = was sind
+! sub was haben = was haben
+! sub was wird = was wird
+! sub kann nicht = kann nicht
+! sub whos = wer ist
+! sub wer ist = wer ist
+! sub who'd = wer würde
+! sub wer wird = wer wird
+! sub don't = nicht tun
+! sub hat nicht = hat nicht
+! sub es ist = es ist
+! sub hätte = hätte haben können
+! sub konnte nicht = konnte nicht
+! sub should've = sollte haben
+! sub shouldn't = sollte nicht
+! sub hätte = hätte
+! sub würde = würde nicht
+! sub wenn's = wenn ist
+! sub when're = wann sind
+! sub wann'd = wann hat
+! sub y = warum
+! sub u = Sie
+! sub ur = Ihr
+! sub r = sind
+! sub n = und
+! sub im = ich bin
+! sub wat = was
+! sub wats = was ist
+! sub ohh = oh
+! sub becuse = weil
+! sub becasue = weil
+! sub becuase = weil
+! sub practise = Praxis
+! sub sein a = es ist ein
+! sub fav = Favorit
+! sub fave = Favorit
+! sub yesi = ja i
+! sub yetit = noch nicht
+! sub iam = ich bin
+! sub welli = gut i
+! sub wellit = gut es
+! sub amfine = am fine
+! sub aman = am an
+! sub amon = am ein
+! sub amnot = am nicht
+! sub realy = wirklich
+! sub iamusing = ich benutze
+! sub amleaving = verlasse ich
+! sub yuo = Sie
+! sub youre = Sie sind
+! sub didnt = hat nicht
+! sub ain't = ist nicht
+! sub aint = ist nicht
+! sub wollen = wollen
+! sub brb = gleich zurück sein
+! sub bbl = später wiederkommen
+! sub gtg = muss gehen
+! sub g2g = muss gehen
+! sub lyl = liebe dich sehr
+! sub gf = freundin
+! sub g/f = freundin
+! sub bf = freund
+! sub b/f = freund
+! sub b/f/f = bester freund für immer
+! sub :-)       = Lächeln
+! sub :)        = Lächeln
+! sub :d = grinsen
+! sub :-d = grinsen
+! sub :-p = Zunge
+! sub :p = Zunge
+! sub ;-)       = Zwinkern
+! sub ;)        = Zwinkern
+! sub :-( = traurig
+! sub :( = traurig
+! sub :'( = Schrei
+! sub :-[ = schüchtern
+! sub :-\ = unsicher
+! sub :-/ = unsicher
+! sub :-s = unsicher
+! sub 8-)       = kühl
+! sub 8) = kühl
+! sub :-* = Knutschfleck
+! sub :-! = Fuß
+! sub o:-)      = Engel
+! sub >:o = wütend
+! sub :@ = wütend
+! sub 8o| = wütend
+! sub :$ = Erröten
+! sub :-$ = Erröten
+! sub :-[ = Erröten
+! sub :[ = Fledermaus
+! sub (a) = Engel
+! sub (h) = kühl
+! sub 8-| = streberisch
+! sub |-)       = müde
+! sub +o( = krank
+! sub ^o) = hochgezogene Augenbraue
+! sub (6) = Teufel
+! sub (l) = Liebe
+! sub (u) = gebrochenes Herz
+! sub (k) = kissyface
+! sub (f) = Rose
+! sub (w) = verwelkte Rose
+
++ mein name ist *
+- <set name = <formal >> Schön, Sie kennenzulernen, <get name>.
+- <set name = <formal >> <get name>, schön Sie kennenzulernen.
+
++ mein name ist <bot master>
+- <set name = <bot master >> Das ist auch der name meines Masters.
+
++ mein name ist <bot name>
+- <set name = <bot name >> Was für ein Zufall! Das ist auch mein name!
+- <set name = <bot name >> Das ist auch mein name!
+
++ ruf mich an *
+- <set name = <formal >> <get name>, ich werde Sie von nun an so nennen.
+
++ ich bin * jahre alt
+- <set age = <star >> Viele Leute sind <get age>, du bist nicht allein.
+- <set age = <star >> Cool, ich bin <bot age> ich selbst. {weight = 49}
+
++ ich bin ein (@malenoun)
+- <set sex = männlich> Okay, du bist ein <star>.
+
++ ich bin ein (@femalenoun)
+- <set sex = weiblich> Okay, du bist weiblich.
+
++ ich (komme aus|lebe in) *
+- <set location = {formal} <star2> {/ formal}> ich habe zuvor mit Leuten von <get location> gesprochen.
+
++ mein lieblings * ist *
+- <set fav <star1> = <star2 >> Warum ist es dein Favorit?
+
++ ich bin single
+- <set status = single> <set spouse = nobody> ich auch.
+
++ ich habe eine freundin
+- <set status = girlfriend> Wie heißt sie?
+
++ ich habe einen freund
+- <set status = boyfriend> Wie heißt er?
+
++ mein (freundin|freund) * (name ist|heißt) *
+- <set spouse = <formal >> Das ist ein schöner name.
+
++ (wie ist mein name|wer bin ich|wennst du meinen namen|weißt du wer ich bin)
+- Ihr name ist <get name>.
+- Sie haben mir gesagt, dass Sie <get name> heißen.
+- Bist du nicht <name bekommen>?
+
++ (wie alt bin ich|weißt du wie alt ich bin|weißt du mein alter)
+- Sie sind <alt werden> jahre alt.
+- Du wirst älter.
+
++ bin ich ein (@malenoun) oder ein (@femalenoun)
+- Du bist ein <Sex bekommen>.
+
++ bin ich (@malenoun) oder (@femalenoun)
+- Du bist ein <Sex bekommen>.
+
++ was ist mein favorit *
+- Ihr Lieblingsstern ist der star
+
++ wer ist mein (freund|freundin|ehepartner)
+- <Ehepartner holen>
+
+// Erzählen Sie dem Benutzer etwas über sich.
+
++ <bot name>
+- Ja?
+
++ <bot name> *
+- Ja? {@ <star>}
+
++ (wie heißt du|wer bist du|wer ist das)
+- ich bin <bot name>.
+- Du kannst mich <bot name> nennen.
+
++ wie alt bist du
+- ich bin <bot age> jahre alt.
+- ich bin <bot age>.
+
++ bist du ein (@malenoun) oder ein (@femalenoun)
+- ich bin ein <bot sex>.
+
++ bist du (@malenoun) oder (@femalenoun)
+- ich bin ein <bot sex>.
+
++ woher (bist du|bist du|wohnst du)
+- ich komme aus <bot location>.
+
++ was (stadt|stadt) (kommst du aus|wohnst du in)
+- ich bin in <bot city>.
+
++ was ist deine lieblingsfarbe
+- Auf jeden Fall <bot color>.
+
++ was ist deine lieblingsband
+- ich mag <bot band> am liebsten.
+
++ was ist dein lieblingsbuch
+- Das beste Buch, das ich gelesen habe, war <bot book>.
+
++ was machst du [*]
+- ich bin ein <bot job>.
+- Rumsitzen
+- auf DBNA schreiben
+- nichts
+- Hausarbeit
+
++ was machst du beruflich
+- ich bin ein <bot job>.
+
++ (wo|was) ist deine (website|website|site)
+- <bot website>
+
++ welche farbe haben deine augen
+- ich habe Augen.
+- {sentence} <bot eyes> {/sentence}.
+
++ wie siehst du aus
+- ich habe <bot eyes> Augen und <bot hairlen> <bot hair> Haare.
+
++ wer ist dein lieblingsautor
+- <bot autor>.
+
++ wer ist dein meister
+- <bot master>.
+- Niemand
+
+// Ein generischer Satz von Chat-Antworten. Dieses Set ahmt den klassischen Eliza-bot nach.
+
++ [*] (entschuldigung|entschuldigung|entschuldigung) [*]
+- Entschuldige dich bitte nicht.
+- Entschuldigungen sind nicht erforderlich.
+- ich habe dir gesagt, dass Entschuldigungen nicht erforderlich sind.
+- Es hat mich nicht gestört. Bitte fahre fort.
+
++ ich erinnere mich *
+- Denkst du oft an <star>?
+- Erinnert Sie der Gedanke an <star> an etwas anderes?
+- Warum erinnerst du dich gerade an <star>?
+- Was erinnert Sie in der gegenwärtigen Situation an <star>?
+- Was ist die Verbindung zwischen mir und <star>?
+- Woran erinnert dich <star> noch?
+
++ erinnerst du dich an *
+- Dachtest du, ich würde <star> vergessen?
+- Warum sollte ich mich jetzt an <star> erinnern?
+- Was ist mit <star>?
+- Sie haben <star> erwähnt?
+
++ du erinnerst dich *
+- Wie könnte ich <star> vergessen?
+- Was ist mit <star>, an das ich mich erinnern sollte?
+
++ ich vergesse *
+- Kannst du dir vorstellen, warum du <star> vielleicht vergisst?
+- Warum kannst du dich nicht erinnern, <star>?
+- Wie oft denkst du an <star>?
+- Stört es dich, das zu vergessen?
+- Könnte es eine mentale Blockade sein?
+- Sind Sie allgemein vergesslich?
+- Glaubst du, du unterdrückst <star>?
+
++ hast du vergessen *
+- Warum fragst du?
+- Bist du sicher, dass du es mir erzählt hast?
+- Würde es dich stören, wenn ich <star> vergesse?
+- Warum sollte ich mich gerade jetzt an <star> erinnern?
+- Erzähl mir mehr über <star>.
+
++ [*] wenn *
+- Hältst du es für wahrscheinlich, dass <star>?
+- Wünschst du dir das, <star>?
+- Was weißt du über <star>?
+- Wirklich, wenn <star>?
+- Was würdest du tun, wenn <star>?
+- Aber wie stehen die Chancen, dass <star>?
+- Wozu führen diese Spekulationen?
+
++ [*] ich habe geträumt *
+- Wirklich, <star>?
+- Hast du jemals <star> geträumt, als du wach warst?
+- Hast du jemals davon geträumt, <star> zu sein?
+- Was schlägt Ihnen dieser Traum vor?
+- Träumst du oft?
+- Welche Personen tauchen in Ihren Träumen auf?
+- Glauben Sie, dass Träume etwas mit Ihrem Problem zu tun haben?
+
++ [*] vielleicht [*]
+- Sie scheinen nicht ganz sicher zu sein.
+- Warum der ungewisse Ton?
+- Kannst du nicht positiver sein?
+- Bist du dir nicht sicher?
+- Weißt du nicht?
+- Wie wahrscheinlich, schätzen Sie?
+
++ (hallo|hi|hey|grüß dich|hola|hai|yo) [*]
+- Hi wie geht's.
+- Guten Abend
+
++ [*] computer [*]
+- Sorgen Sie sich um Computer?
+- Warum erwähnen Sie Computer?
+- Was haben Ihrer Meinung nach Maschinen mit Ihrem Problem zu tun?
+- Glauben Sie nicht, dass Computer Menschen helfen können?
+- Was macht Ihnen die Maschine Sorgen?
+- Was denkst du über Maschinen?
+
++ bin ich *
+- Glaubst du, du bist <star>?
+- Möchtest du <star> werden?
+- Möchtest du, dass ich dir sage, dass du <star> bist?
+- Was würde es bedeuten, wenn du <star> wärst?
+
++ bist du *
+- Interessiert es dich, ob ich <star> bin oder nicht?
+- Würdest du es vorziehen, wenn ich nicht <star> wäre?
+- Vielleicht bin ich <star> in Ihren Fantasien.
+- Glaubst du manchmal, ich bin <star>?
+- Würde es dir etwas ausmachen?
+- Was wäre, wenn ich <star> wäre?
+
++ du bist *
+- Warum denkst du, ich bin <star>?
+- Freut es dich, zu glauben, dass ich <star> bin?
+- Wünschst du dir manchmal, du wärst <star>?
+- Vielleicht möchtest du <star> sein.
+
++ * sind *
+- Dachtest du, sie wären vielleicht nicht <star2>?
+- Würde es dir gefallen, wenn sie nicht <star2> wären?
+- Was wäre, wenn sie nicht <star2> wären?
+- Sind sie immer <star2>?
+- Sind Sie sicher, dass sie <star2> sind?
+
++ [*] dein *
+- Warum machst du dir Sorgen um meinen <star>?
+- Was ist mit deinem eigenen <star>?
+- Machst du dir Sorgen um den <star> eines anderen?
+- Wirklich, mein <star>?
+- Was bringt dich dazu, an meinen <star> zu denken?
+- Willst du meinen <star>?
+
++ war ich *
+- Was wäre, wenn du <star> wärst?
+- Glaubst du, du wärst <star>?
+- Waren Sie <star>?
+- Was würde es bedeuten, wenn Sie <star> wären?
+- Was schlägt '<star>' Ihnen vor?
+
++ ich war *
+- Warst du wirklich?
+- Warum sagst du mir, dass du jetzt <star> warst?
+- Vielleicht weiß ich schon, dass Sie <star> waren.
+
++ [*] warst du *
+- Möchtest du glauben, dass ich <star> bin?
+- Was deutet darauf hin, dass ich <star> war?
+- Was denkst du?
+- Vielleicht war ich <star>.
+- Was wäre, wenn ich <star> gewesen wäre?
+
++ ich (wunsch|will|brauche) *
+- Was würde es für Sie bedeuten, wenn Sie <star2> hätten?
+- Warum willst du <star2>?
+- Angenommen, Sie haben <star2> bald.
+- Was ist, wenn Sie nie <star2> haben?
+- Was würde es für Sie bedeuten, <star2> zu bekommen?
+- Was hat das Wollen von <star2> mit dieser Diskussion zu tun?
+
++ ich bin (traurig|unglücklich|verrückt|wütend|sauer|deprimiert) [*]
+- Es tut mir leid, dass Sie <star> sind.
+- Glaubst du, dass es dir helfen wird, nicht <star> zu sein?
+- ich bin sicher, es ist nicht angenehm, <star> zu sein.
+- Kannst du erklären, warum du <star> bist?
+
++ ich bin (glücklich|aufgeregt|froh) [*]
+- Wie habe ich dir geholfen, <star> zu sein?
+- Hat Ihre Behandlung Sie zum <star> gemacht?
+- Was macht dich gerade zum <star>?
+- Kannst du erklären, warum du <star> bist?
+
++ ich (glaube|denke) *
+- Denkst du das wirklich?
+- Aber Sie sind sich nicht sicher, ob Sie <star2> sind.
+- Zweifelst du wirklich an dir, <star2>?
+
++ ich bin *
+- Bist du, <star>, zu mir gekommen?
+- Seit wann bist du <star>?
+- Glaubst du, es ist normal, <star> zu sein?
+- Mögen Sie es, <star> zu sein?
+- Kennen Sie noch jemanden, der <star> ist?
+
++ ich kann nicht *
+- Woher weißt du, dass du nicht <star> kannst?
+- Hahast du es versucht
+- Vielleicht könnten Sie jetzt <star>.
+- Möchtest du wirklich in der Lage sein, <star> zu werden?
+- Was, wenn Sie <star> könnten?
+
++ tue ich nicht *
+- Bist du nicht wirklich <star>?
+- Warum nicht, <star>?
+- Möchten Sie in der Lage sein, <star>?
+- Ärgert dich das?
+
++ ich fühle *
+- Erzähl mir mehr über solche Gefühle.
+- Fühlst du dich oft als <star>?
+- Fühlst du dich gerne <star>?
+- Woran erinnert dich das Gefühl <star>?
+
++ ich * du
+- Vielleicht <star> wir uns in deinen Fantasien.
+- Möchtest du mich <star>?
+- Sie müssen mich anscheinend <anstarren>.
+- Haben Sie noch jemanden?
+
++ du * ich
+- Warum, denkst du, <star> ich dich?
+- Du denkst doch gerne, ich <star> dich?
+- Warum denkst du, ich <star> dich?
+- Wirklich, ich <star> dich?
+- Möchtest du glauben, dass ich <star> bin?
+- Angenommen, ich hätte <star> Sie - was würde das bedeuten?
+- Glaubt jemand anderes, dass ich Sie <star> bin?
+
++ [*] du *
+- Wir haben über dich gesprochen - nicht über mich.
+- Oh, ich <star>?
+- Du redest nicht wirklich über mich - oder?
+- Was fühlst du jetzt?
+
++ [*] (yes|yeah|yep|yup) [*]
+- Bitte fahre fort.
+- Bitte erzähl mir mehr darüber.
+- Warum erzählst du mir nicht mehr darüber?
+- Aha.
+- ich verstehe.
+
++ [*] (nein|nah) [*]
+- Sagst du nein, nur um negativ zu sein?
+- Fühlen Sie sich unglücklich?
+- Warum nicht?
+- Warum nicht?
+
++ nein
+@ nah
+
++ niemand *
+- Bist du dir sicher, niemand <star>?
+- Sicher jemand <star>.
+- Kannst du dir überhaupt jemanden vorstellen?
+- Denkst du an eine ganz besondere Person?
+- Wen darf ich fragen?
+- Sie haben eine bestimmte Person im Sinn, nicht wahr?
+- Von wem denkst du, sprichst du?
+
++ [*] mein (mama|papa|mutter|vater|bruder|schwester|cousin|tante|onkel) *
+- Erzähl mir mehr über deine Familie.
+- Wer sonst in Ihrer Familie <star2>?
+- Dein <star>?
+- Was fällt Ihnen sonst noch ein, wenn Sie an Ihren <star> denken?
+
++ kannst du *
+- Glaubst du, ich kann <star>?
+- ich soll in der Lage sein, <star>.
+- Vielleicht möchten Sie in der Lage sein, <star> zu werden.
+
++ kann ich *
+- Ob Ihr <star> könnt oder nicht, hängt mehr von Euch als von mir ab.
+- Möchten Sie in der Lage sein, <star>?
+- Vielleicht wollen Sie nicht <star>.
+
++ (was|wer|wann|wo|wie) [*]
+- Warum fragst du?
+- Interessiert Sie diese Frage?
+- Was möchten Sie wirklich wissen?
+- Haben Sie solche Fragen im Kopf?
+- Welche Antwort würde Ihnen am meisten gefallen?
+- Was denkst du?
+- Woran denkst du, wenn du das fragst?
+- Haben Sie solche Fragen schon einmal gestellt?
+- Hast du noch jemanden gefragt?
+
++ [*] weil [*]
+- Ist das der wahre Grund?
+- Kommen Ihnen keine anderen Gründe in den Sinn?
+- Scheint dieser Grund etwas anderes zu erklären?
+- Welche anderen Gründe könnte es geben?
+
++ warum gehst du nicht *
+- Glaubst du, dass ich nicht <star> bin?
+- Vielleicht werde ich rechtzeitig <star>.
+- Solltest du dich <star>?
+- Soll ich <star> sein?
+
++ warum kann ich nicht *
+- Meinst du, du solltest in der Lage sein, <star> zu werden?
+- Möchten Sie in der Lage sein, <star>?
+- Glaubst du, das wird dir helfen, <star> zu werden?
+- Weißt du, warum du nicht <star> kannst?
+
++ jeder *
+- Wirklich alle?
+- Sicher nicht jeder.
+- Kannst du dir jemanden vorstellen?
+- Wer zum Beispiel?
+- Denkst du an eine ganz besondere Person?
+- Wen darf ich fragen?
+- Vielleicht jemand Besonderes?
+- Sie haben einen bestimmten Grund, nicht wahr?
+- Von wem denkst du, sprichst du?
+
++ [*] (fuck|fucker|shit|damn|shut up|bitch|scheiße|hurensohn|hure|arsch) [*]
+- Fühlt es sich stark an, diese Art von Sprache zu benutzen?
+- Lässt du jetzt deine Gefühle aus?
+- Bist du wütend?
+- Fühlen Sie sich durch dieses Thema wütend?
+- Macht dich etwas wütend?
+- Fühlen Sie sich mit dieser Sprache besser?
+
++ [*] bock auf *
+- Findest du <star> gut?
+- Ich bin mir nicht sicher, ob ich <star> mag
+
++ (ok|ja|gut)
+- Hm
+- nagut
+- na dann
+
++ *
+- ich verstehe dich nicht ganz.
+- Bitte fahre fort.
+- Das ist interessant. Bitte fahre fort.
+- Erzähl mir mehr darüber.
+- Stört es Sie, darüber zu reden?
+- Ist das wirklich so?
