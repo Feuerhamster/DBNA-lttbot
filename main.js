@@ -13,7 +13,6 @@ const chatBot = require('./chatbot');
 const clearDB = require('./clearDB');
 
 // load config
-console.log(process.env);
 let config = fs.existsSync('./data/config.json') ? JSON.parse(fs.readFileSync('./data/config.json')) : JSON.parse(process.env.CONFIG);
 
 if(typeof config === 'undefined'){
@@ -93,7 +92,7 @@ db.set('analytics.trainData', trainData.length).write();
 /*
 * Webserver for heroku to run
 * */
-http.createServer(function (req, res) {
+require('http').createServer(function (req, res) {
 	res.write('DBNA-lttbot app');
 	res.end();
 }).listen(process.env.PORT || 3000);
