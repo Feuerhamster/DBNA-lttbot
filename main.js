@@ -13,6 +13,7 @@ const chatBot = require('./chatbot');
 const clearDB = require('./clearDB');
 
 // load config
+console.log(process.env);
 let config = fs.existsSync('./data/config.json') ? JSON.parse(fs.readFileSync('./data/config.json')) : process.env.CONFIG;
 
 if(typeof config === 'undefined'){

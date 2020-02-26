@@ -4,7 +4,8 @@
   "description": "A Node.js Bot for DBNA to track and handle \"like-to-text\" posts.",
   "main": "main.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node main.js"
   },
   "repository": {
     "type": "git",
