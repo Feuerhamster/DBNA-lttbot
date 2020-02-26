@@ -55,10 +55,19 @@ function chatBot(){
 				rsbot.reply('local-user', tcw.tokenize(msg.message.message).join(' '))
 					.then((reply) => {
 
-						setTimeout(() => {
-							msg.chat.typing(false);
-							msg.chat.send(reply);
-						}, textDelay(reply));
+						if(reply !== 'error'){
+							setTimeout(() => {
+								msg.chat.typing(false);
+								msg.chat.send(reply);
+							}, textDelay(reply));
+						}else{
+							setTimeout(() => {
+								msg.chat.typing(false);
+								msg.chat.send('Sorry ich muss mal eben wo hin. Wir können später weiter schreiben.');
+							}, textDelay(reply));
+							dbna.user(config.chatbot.rootUsers[0]).chat().send(`LTT-Bot: Cannot answer to "${msg.message.message}"`);
+						}
+
 
 					});
 
