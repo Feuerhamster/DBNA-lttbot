@@ -16,8 +16,8 @@
 ! var sex = männlich
 ! var location = Berlin
 ! var city = Berlin
-! var Augen = blau
-! var Haare = blond
+! var eyes = blau
+! var hair = blond
 ! var hairlen = mittel
 ! var color = blau
 ! var band = Alle Farben
@@ -156,7 +156,7 @@
 ! sub (a) = Engel
 ! sub (h) = kühl
 ! sub 8-| = streberisch
-! sub |-)       = müde
+! sub |-) = müde
 ! sub +o( = krank
 ! sub ^o) = hochgezogene Augenbraue
 ! sub (6) = Teufel
@@ -167,61 +167,35 @@
 ! sub (w) = verwelkte Rose
 
 + ich bin * jahre alt
-- <set age = <star >> Viele Leute sind <get age>, du bist nicht allein.
-- <set age = <star >> Cool, ich bin <bot age> ich selbst. {weight = 49}
+- Viele Leute sind <star>, du bist nicht allein.
+- Cool, ich bin <bot age> jahre alt.
 
-+ ich bin ein (@malenoun)
-- <set sex = männlich> Okay, du bist ein <star>.
-
-+ ich bin ein (@femalenoun)
-- <set sex = weiblich> Okay, du bist weiblich.
-
-+ ich (komme aus|lebe in) *
-- <set location = {formal} <star2> {/ formal}> ich habe zuvor mit Leuten von <get location> gesprochen.
-
-+ mein lieblings * ist *
-- <set fav <star1> = <star2 >> Warum ist es dein Favorit?
++ mein lieblings* ist *
+- Warum ist es dein Favorit?
 
 + ich bin single
-- <set status = single> <set spouse = nobody> ich auch.
+- ich auch.
 
 + ich habe eine freundin
-- <set status = girlfriend> Wie heißt sie?
+- Wie heißt sie?
 
 + ich habe einen freund
-- <set status = boyfriend> Wie heißt er?
+- Wie heißt er?
 
 + mein (freundin|freund) * (name ist|heißt) *
-- <set spouse = <formal >> Das ist ein schöner name.
-
-+ (wie ist mein name|wer bin ich|wennst du meinen namen|weißt du wer ich bin)
-- Ihr name ist <get name>.
-- Du hast mir gesagt, dass du <get name> heißen.
-- Bist du nicht <name bekommen>?
+-  Das ist ein schöner name.
 
 + (wie alt bin ich|weißt du wie alt ich bin|weißt du mein alter)
-- Du bist <alt werden> jahre alt.
 - Du wirst älter.
-
-+ bin ich ein (@malenoun) oder ein (@femalenoun)
-- Du bist ein <Sex bekommen>.
-
-+ bin ich (@malenoun) oder (@femalenoun)
-- Du bist ein <Sex bekommen>.
-
-+ was ist mein favorit *
-- Ihr Lieblingsstern ist der star
+- Steht in deinem Profil
 
 + wer ist mein (freund|freundin|ehepartner)
 - <Ehepartner holen>
 
 // Erzählen Sie dem Benutzer etwas über sich.
 
-+ <bot name>
++ <bot name>[ *]
 - Ja?
-
-+ <bot name> *
-- Ja? {@ <star>}
 
 + (wie heißt du|wer bist du|wer ist das)
 - ich bin <bot name>.
@@ -347,7 +321,7 @@
 - Weißt du nicht?
 - Wie wahrscheinlich, schätzt du?
 
-+ (hallo|hi|hey|grüß dich|hola|hai|yo|hay|hii|na) [*]
++ (hallo|hi|hey|grüß dich|hola|hai|yo|hay|hii|na|heyy) [*]
 - Hi wie geht's.
 - Guten Abend
 
