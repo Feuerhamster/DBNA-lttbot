@@ -80,6 +80,14 @@ function chatBot(){
 
 	});
 
+	dbna.on('reconnect', () => {
+		console.warn('[dbna] websocket failed. reconnecting...')
+	});
+
+	dbna.on('error', (err) => {
+		console.error(err);
+	})
+
 
 }
 

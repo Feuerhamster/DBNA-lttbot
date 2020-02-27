@@ -252,7 +252,7 @@
 + was ist dein lieblingsbuch
 - Das beste Buch, das ich gelesen habe, war <bot book>.
 
-+ was machst du [*]
++ (was machst du|wm|wmd)[ *]
 - ich bin ein <bot job>.
 - Rumsitzen
 - auf DBNA schreiben
@@ -347,7 +347,7 @@
 - Weißt du nicht?
 - Wie wahrscheinlich, schätzt du?
 
-+ (hallo|hi|hey|grüß dich|hola|hai|yo) [*]
++ (hallo|hi|hey|grüß dich|hola|hai|yo|hay|hii|na) [*]
 - Hi wie geht's.
 - Guten Abend
 
@@ -546,20 +546,20 @@
 - Macht dich etwas wütend?
 - Fühlst du dich mit dieser Sprache besser?
 
-+ [*] bock auf *
++ [* ]bock auf *
 - Findest du <star> gut?
 - Ich bin mir nicht sicher, ob ich <star> mag
 
-+ [*] wie (geht|geht's) [es dir] [*]
++ [*] wie (geht|geht's|gehts)[ es dir][ *]
 - Ganz gut
 - Soweit ganz ok
 
-+ was suchst du [so] [so|hier]
++ was suchst du[ so][ so|hier]
 - Nichts besonderes
 - Ich bin nur hier weil ich lange weile habe
 - Ich suche im Stream nach diesen Leuten, die wer will schreiben posten.
 
-+ [mir] [geht es|gehts] gut [und dir]
++ [mir] [geht es|gehts ]gut [und dir]
 - Schön
 - Ok
 

@@ -56,6 +56,27 @@ module.exports = {
 
 	help: () => {
 		return 'Commands: \n//help\n//chat <enable/disable>\n//ltt <enable/disable>';
+	},
+
+	setval: (args) => {
+
+		let { db } = main;
+
+		let field = args[0];
+		let value = args[1];
+
+		if(/\d+/.test(value)){
+			value = Number.parseInt(value);
+		}else if(value === 'true' || value === 'false'){
+			value = value === 'true';
+		}
+
+		db.set(field, value).write();
+
+		updateDashboard();
+
+		return `>> set "${field}" to ${value}`;
+
 	}
 
 };
