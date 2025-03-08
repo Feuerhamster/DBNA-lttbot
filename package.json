@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Feuerhamster/DBNA-lttbot#readme",
   "dependencies": {
     "@types/lowdb": "^1.0.9",
-    "axios": "^0.19.2",
+    "axios": "^1.8.2",
     "lowdb": "^1.0.0",
     "rivescript": "^2.0.0",
     "ws": "^7.2.1"
